@@ -257,7 +257,11 @@
         <div class="small-grid" id="grid"></div>
     </div>
 
-    <script>eval(atob("Ly8gUGFzc3dvcmQgbGlua2VkIHRvIEhhaWRlcgogICAgICAgIGNvbnN0IHNlY3JldFBhc3N3b3JkID0gIkhhaWRlcjIwMjYqIjsgCiAgICAgICAgY29uc3QgZW50ZXJlZFBhc3N3b3JkID0gcHJvbXB0KCLYp9mE2LHYrNin2KEg2KXYr9iu2KfZhCDZg9mE2YXYqSDYp9mE2YXYsdmI2LEg2YTYqti02LrZitmEINin2YTZhNi52KjYqToiKTsKICAgICAgICBpZiAoZW50ZXJlZFBhc3N3b3JkICE9PSBzZWNyZXRQYXNzd29yZCkgewogICAgICAgICAgICBkb2N1bWVudC5ib2R5LmlubmVySFRNTCA9 "<h1 style='text-align:center; margin-top:20vh; color:red;'>عذراً، الوصول مرفوض.</h1>";
+    <script>
+        const secretPassword = "Haider2026*";
+        const enteredPassword = prompt("الرجاء إدخال كلمة المرور لتشغيل اللعبة:");
+        if (enteredPassword !== secretPassword) {
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:red;'>عذراً، الوصول مرفوض.</h1>";
             throw new Error("Unauthorized Access");
         }
 
@@ -673,7 +677,7 @@
                 document.documentElement.requestFullscreen().catch(err => {});
             }
         }
-        
+
         renderGrid();
     </script>
 </body>
